@@ -9,7 +9,7 @@
 using namespace std;
 
 
-// ½á¹¹Ìå×÷ÎªmapµÄkey Ê±ĞèÅÅĞò½á¹¹ÌåÔªËØ
+// ç»“æ„ä½“ä½œä¸ºmapçš„key æ—¶éœ€æ’åºç»“æ„ä½“å…ƒç´ 
 typedef struct tagStudent
 {
 	int num;
@@ -25,11 +25,11 @@ typedef struct tagStudent
 	
 	bool operator <(const tagStudent& other) const
 	{
-		if (num < other.num)        //num°´ÉıĞòÅÅĞò
+		if (num < other.num)        //numæŒ‰å‡åºæ’åº
 		{
 			return true;
 		}
-		else if (num == other.num)  //Èç¹ûnumÏàÍ¬£¬°´nameÉıĞòÅÅĞò
+		else if (num == other.num)  //å¦‚æœnumç›¸åŒï¼ŒæŒ‰nameå‡åºæ’åº
 		{
 			return name < other.name;
 		}
@@ -38,7 +38,7 @@ typedef struct tagStudent
 }Student;
 
 
-// map µÄkeyºÍvalueÎª½á¹¹Ìå
+// map çš„keyå’Œvalueä¸ºç»“æ„ä½“
 void test_struct_map()
 {
 	map<Student, Student> m_ss;
@@ -50,7 +50,7 @@ void test_struct_map()
 	m_ss.insert(pair<Student, Student>(stu, stu));
 }
 
-// map µÄkeyÎª½á¹¹ÌåÊ±µÄfind
+// map çš„keyä¸ºç»“æ„ä½“æ—¶çš„find
 void test_struct_map_find()
 {
 	map<Student, Student> m_ss;
@@ -98,3 +98,4 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+//this is test 1
